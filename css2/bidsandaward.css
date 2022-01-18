@@ -1,0 +1,100 @@
+/* header for menu*/
+header{
+  position: fixed;
+  bottom:0;
+  height: auto;
+  width: 100%;
+  background:white;
+  color: black;
+  z-index: 999999999;
+}
+header .logo{
+  font-size: 2.5em;
+  font-weight: 700;
+  cursor: pointer;
+  margin-left: 10%;
+  float: left;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5%;
+}
+header .main-ul{
+  margin:0; 
+  float: right;
+  width: 65%;
+  height: 100%;
+  text-align: center;
+}
+header .main-ul li{
+  list-style-type: none;
+  display: inline-block;
+  padding: 20px 15px;
+  cursor: pointer;
+}
+header .main-ul li a{
+  color: black;
+  font-size: 1em;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+header .main-ul li:hover{
+  background:rgba(0, 0, 0, 0.2);
+}
+
+  /*dropdown-menu*/
+
+header .main-ul li .dropdown-menu{
+  position: absolute;
+  bottom:100%;
+  margin-left: -5%;
+  background:white;
+  display: none;
+  font-size: 12px;
+  line-height: 5px;
+}
+header .main-ul li:hover .dropdown-menu{
+  display: block;
+}
+header .main-ul li .dropdown-menu li{
+  display: block;
+  margin-left:-25%;
+}
+
+header .main-ul li .dropdown-menu1{
+  position: absolute;
+  bottom:100%;
+  margin-left: -1%;
+  background:white;
+  display: none;
+  font-size: 12px;
+  line-height: 5px;
+}
+header .main-ul li:hover .dropdown-menu1{
+  display: block;
+}
+header .main-ul li .dropdown-menu1 li{
+  display: block;
+  margin-left:-25%;
+}
+
+header .main-ul li .dropdown-menu2{
+  position: absolute;
+  bottom:100%;
+  margin-left: -2%;
+  background:white;
+  display: none;
+  font-size: 14px;
+  line-height: 5px;
+}
+header .main-ul li:hover .dropdown-menu2{
+  display: block;
+}
+header .main-ul li .dropdown-menu2 li{
+  display: block;
+  margin-left:-25%;
+}
+
+/* End Footer */

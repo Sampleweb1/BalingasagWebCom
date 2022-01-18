@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+  background-color: #f1f1f1;
+  padding: fixed;
+  text-align: center;
+}
+.mark2{
+    overflow: hidden;
+}
+.mark2 a{
+  display: block;
+  color: #3c3c3c;
+  text-align: center;
+  padding: 20px 25px;
+  text-decoration: none;
+  font-size: 30px;
+
+}
+.mark2 p{
+  font-size:25px;
+
+}
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 20px 25px;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+/* Change color on hover */
+.mark{
+ 
+  text-align: justify;
+  margin-left: 400px;
+  font-size: 23px;
+  margin-right: 260px;
+}
+
+
+/* End Footer */
+
+/* Create three equal columns that floats next to each other */
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:1200px) {
+  .column {
+    width: 100%;
+  }
+}

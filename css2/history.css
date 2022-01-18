@@ -1,0 +1,481 @@
+* {
+  box-sizing:border-box;
+  
+}
+
+body {
+  margin: 0;
+  font-family: "Times New Roman", Times, serif;
+  
+}
+
+.container {
+  padding: 20px;
+}
+.mark1{
+  margin-top: -50px;
+  text-align: justify;
+  margin-right: 60px;
+  font-size: 17px;
+}
+.mark2{
+  margin-top: -50px;
+}
+.mark2 p{
+  text-align: justify;
+  margin-right: 60px;
+  font-size: 17px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both
+}
+.mark p{
+  margin-top: -50px;
+  text-align: justify;
+  margin-left: 100px;
+  margin-right: 80px;
+  font-size: 17px;
+}
+.column-66 {
+  margin-left: 80px;
+  width: fixed;
+  padding: -1px;
+}
+
+.column-33 {
+  float: left;
+  width: 100%;
+  padding: -5px;
+}
+
+.large-font {
+  font-size: 48px;
+}
+
+.xlarge-font {
+  font-size: 20px
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #04AA6D;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+  .column-66,
+  .column-33 {
+    width: 100%;
+    text-align: center;
+    
+
+  }
+  img {
+    margin: auto;
+  }
+}
+/* Projects section */
+#projects .projects {
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+#projects .projects-header h1 {
+  margin-bottom: 50px;
+}
+#projects .all-projects {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#projects .project-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+#projects .project-info {
+  padding: 30px;
+  flex-basis: 50%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  color: white;
+}
+#projects .project-info h1 {
+  font-size: 4rem;
+  font-weight: 500;
+}
+#projects .project-info h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-top: 10px;
+}
+#projects .project-info p {
+  color: white;
+}
+#projects .project-img {
+  flex-basis: 50%;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+#projects .project-img:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  opacity: 0.7;
+}
+#projects .project-img img {
+  transition: 0.3s ease transform;
+}
+#projects .project-item:hover .project-img img {
+  transform: scale(1.1);
+}
+/* End Projects section */
+/* Gallery Section */
+.wrapper{
+  margin: 100px auto;
+  max-width: 1100px;
+}
+.wrapper nav{
+  display: flex;
+  justify-content: center;
+}
+.wrapper .items{
+  display: flex;
+  max-width: 720px;
+  width: 100%;
+  justify-content: space-between;
+}
+.items span{
+  padding: 10px 30px;
+  font-size: 15px;
+  font-weight: 500px;
+  cursor: pointer;
+  color: #007bff;
+  border-radius: 50px;
+  border: 2px solid #007bff;
+  transition: all 0.3s ease;
+}
+.items span.active,
+.items span:hover{
+  color: #fff;
+  background: #007bff;
+}
+
+#gallery{
+  display: flex;
+  padding: 20px 5;
+}
+.gallery{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+.gallery .image{
+  width: calc(100% / 4);
+  padding: 7px;
+}
+.gallery .image span{
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+.gallery .image img{
+  width: 100%;
+  vertical-align: middle;
+  transition: all 0.3s ease;
+}
+.gallery .image:hover img{
+  transform: scale(1.1);
+}
+.gallery .image.hide{
+  display: none;
+}
+.gallery .image.show{
+  animation: animate 0.4s ease;
+}
+@keyframes animate {
+  0%{
+    transform: scale(0.5);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+.preview-box{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  background: #fff;
+  max-width: 700px;
+  width: 100%;
+  z-index: 5;
+  opacity: 0;
+  pointer-events: none;
+  border-radius: 3px;
+  padding: 0 5px 5px 5px;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+}
+.preview-box.show{
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+  transition: all 0.3s ease;
+}
+.preview-box .details{
+  padding: 13px 15px 13px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.details .title{
+  display: flex;
+  font-size: 18px;
+  font-weight: 400;
+}
+.details .title p{
+  font-weight: 500;
+  margin-left: 5px;
+}
+.details .icon{
+  color: #007bff;
+  font-style: 22px;
+  cursor: pointer;
+}
+.preview-box .image-box{
+  width: 100%;
+  display: flex;
+}
+.image-box img{
+  width: 100%;
+  border-radius: 0 0 3px 3px;
+}
+.shadow{
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  display: none;
+  background: rgba(0,0,0,0.4);
+}
+.shadow.show{
+  display: block;
+}
+
+@media (max-width: 1000px) {
+  .gallery .image{
+    width: calc(100% / 3);
+  }
+}
+@media (max-width: 800px) {
+  .gallery .image{
+    width: calc(100% / 2);
+  }
+}
+@media (max-width: 700px) {
+  .wrapper nav .items{
+    max-width: 600px;
+  }
+  nav .items span{
+    padding: 7px 15px;
+  }
+}
+@media (max-width: 600px) {
+  .wrapper{
+    margin: 30px auto;
+  }
+  .wrapper nav .items{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  nav .items span{
+    margin: 5px;
+  }
+  .gallery .image{
+    width: 100%;
+  }
+}
+
+/*End Gallery Section */
+
+/* Footer */
+#footer {
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+}
+#footer .footer {
+  min-height: 200px;
+  flex-direction: column;
+  padding-top: 50px;
+  padding-bottom: 10px;
+}
+#footer h2 {
+  color: white;
+  font-weight: 500;
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#footer .social-icon {
+  display: flex;
+  margin-bottom: 30px;
+}
+#footer .social-item {
+  height: 50px;
+  width: 50px;
+  margin: 0 5px;
+}
+#footer .social-item img {
+  filter: grayscale(1);
+  transition: 0.3s ease filter;
+}
+#footer .social-item:hover img {
+  filter: grayscale(0);
+}
+#footer p {
+  color: white;
+  font-size: 1.3rem;
+}
+.girl{
+  width: 1600px; 
+  height: 600px;
+  padding: 5rem;
+  object-fit: cover;
+}
+.girl1{
+	width: 80px;
+	clip-path: circle();
+	vertical-align: middle;
+	color: white;
+}
+/* header for menu*/
+header{
+  position: fixed;
+  bottom:0;
+  height: auto;
+  width: 100%;
+  background:white;
+  color: black;
+  z-index: 999999999;
+}
+header .logo{
+  font-size: 2.5em;
+  font-weight: 700;
+  cursor: pointer;
+  margin-left: 10%;
+  float: left;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5%;
+}
+header .main-ul{
+  margin:0; 
+  float: right;
+  width: 65%;
+  height: 100%;
+  text-align: center;
+}
+header .main-ul li{
+  list-style-type: none;
+  display: inline-block;
+  padding: 20px 15px;
+  cursor: pointer;
+}
+header .main-ul li a{
+  color: black;
+  font-size: 1em;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+header .main-ul li:hover{
+  background:rgba(0, 0, 0, 0.2);
+}
+
+  /*dropdown-menu*/
+
+header .main-ul li .dropdown-menu{
+  position: absolute;
+  bottom:100%;
+  margin-left: -5%;
+  background:white;
+  display: none;
+  font-size: 12px;
+  line-height: 5px;
+}
+header .main-ul li:hover .dropdown-menu{
+  display: block;
+}
+header .main-ul li .dropdown-menu li{
+  display: block;
+  margin-left:-25%;
+}
+
+header .main-ul li .dropdown-menu1{
+  position: absolute;
+  bottom:100%;
+  margin-left: -1%;
+  background:white;
+  display: none;
+  font-size: 12px;
+  line-height: 5px;
+}
+header .main-ul li:hover .dropdown-menu1{
+  display: block;
+}
+header .main-ul li .dropdown-menu1 li{
+  display: block;
+  margin-left:-25%;
+}
+
+header .main-ul li .dropdown-menu2{
+  position: absolute;
+  bottom:100%;
+  margin-left: -2%;
+  background:white;
+  display: none;
+  font-size: 14px;
+  line-height: 5px;
+}
+header .main-ul li:hover .dropdown-menu2{
+  display: block;
+}
+header .main-ul li .dropdown-menu2 li{
+  display: block;
+  margin-left:-25%;
+}
+
+/* End Footer */
+/* balingasag logo */

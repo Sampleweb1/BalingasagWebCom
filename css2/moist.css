@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css?family=Allura|Josefin+Sans');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background: #ffe6e6;
+}
+.container {
+  margin: 0 auto;
+  width: 100%;
+  height:450px;
+  position: relative;
+  overflow: hidden;
+}
+.slides {
+  display: flex;
+  height: 100%;
+}
+.slide {
+  min-width: 100%;
+  position: relative;
+}
+.slide img {
+  width: 100%;
+  height: 100%;
+}
+.slide-controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#next-btn,
+#prev-btn {
+  cursor: pointer;
+  background: transparent;
+  font-size: 30px;
+  border: none;
+  padding: 10px;
+  color: white;
+}
+#next-btn:focus,
+#prev-btn:focus {
+  outline: none;
+}
+.slide-content {
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  transform: translateY(-50%);
+  font-size: 60px;
+  color: white;
+}
+
+/*START WRAPPER*/
+.wrapper{
+  margin-top: 40px;
+}
+
+.wrapper h1{
+  font-family: 'Allura', cursive;
+  font-size: 40px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.team{
+  display: flex;
+  justify-content: center;
+  width: auto;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.team .team_member{
+  background: #fff;
+  margin: 5px;
+  margin-bottom: 50px;
+  width: 300px;
+  padding: 20px;
+  line-height: 20px;
+  color: #8e8b8b;  
+  position: relative;
+}
+
+.team .team_member h3{
+  color: #81c644;
+  font-size: 26px;
+  margin-top: 50px;
+}
+
+.team .team_member p.role{
+  color: #000000  ;
+  margin: 12px 0;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.team .team_member p.role2{
+  color: #000000  ;
+  text-align: justify;
+  font-size: 20px;
+}
+
+.team .team_member .team_img{
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.team .team_member .team_img img{
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+}
+/*END WRAPPER*/
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section {
+  width: 45%;
+  height: 100%;
+  margin-top: -10%;
+}
+/*video*/
+.section p{
+  margin-top: -1%;  
+  margin-bottom: -10%;
+  font-size: 17px;
+  margin-right: 10%;
+ text-align: justify;
+
+}
+
+video {
+  width: 100%;
+  height: 56.25%;
+  margin-top: 20.875%;
+
+}
+/*end video*/
+
+/* header for menu*/
+header{
+  position: fixed;
+  bottom:0;
+  height: auto;
+  width: 100%;
+  background:white;
+  color: black;
+  z-index: 9999999999;
+  
+}
+header .logo{
+  font-size: 2.5em;
+  font-weight: 700;
+  cursor: pointer;
+  margin-left: 10%;
+  float: left;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5%;
+}
+header .main-ul{
+  margin:0; 
+  float: right;
+  width: 60%;
+  height: 100%;
+  text-align: center;
+}
+header .main-ul li{
+  list-style-type: none;
+  display: inline-block;
+  padding:20px 20px;
+  cursor: pointer;
+}
+header .main-ul li a{
+  color: black;
+  font-size: 1em;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+header .main-ul li:hover{
+  background:rgba(0, 0, 0, 0.2);
+
+}
+
+  /*dropdown-menu*/
+
+header .main-ul li .dropdown-menu{
+  position: absolute;
+  bottom:100%;
+  margin-left: -4%;
+  background:white;
+  display: none;
+  font-size: 15px;
+  line-height: 4px;
+}
+header .main-ul li:hover .dropdown-menu{
+  display: block;
+}
+header .main-ul li .dropdown-menu li{
+  display: block;
+  margin-left:-1%;
+}
+
+header .main-ul li .dropdown-menu1{
+  position: absolute;
+  bottom:100%;
+  margin-right: -10%;
+  background:white;
+  display: none;
+  font-size: 15px;
+  line-height: 4px;
+}
+header .main-ul li:hover .dropdown-menu1{
+  display: block;
+}
+header .main-ul li .dropdown-menu1 li{
+  display: block;
+  margin-left:-1%;
+}
+
+header .main-ul li .dropdown-menu2{
+  position: absolute;
+  bottom:100%;
+  margin-right: -10%;
+  background:white;
+  display: none;
+  font-size: 17px;
+  line-height: 4px;
+ 
+}
+header .main-ul li:hover .dropdown-menu2{
+  display: block;
+}
+header .main-ul li .dropdown-menu2 li{
+  display: block;
+  margin-left:-1%;
+}
+/* sub-dropdown-menu */
+
+.map{
+  margin-left: 5%;
+}

@@ -1,0 +1,183 @@
+body {
+  padding: 2em;
+  margin: 0;
+  height: 100vh;
+  font-family: 'Nunito',Arial;
+}
+
+summary {
+  padding: 1em;
+  background: #ffda05;
+  margin-bottom: 1em;
+  cursor: pointer;
+  outline: none;
+  border-radius: .3em;
+  font-weight: bold;
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
+}
+
+summary:hover {
+  background: #0c0c0b;
+}
+
+summary::-webkit-details-marker {
+  background: url("../down.svg") center no-repeat;
+  color: transparent;
+  width: 17px;
+  height: 17px;
+}
+
+img {
+  width: 100%;
+}
+
+details[open] summary ~ * {
+  -webkit-animation: sweep .5s ease-in-out;
+          animation: sweep .5s ease-in-out;
+}
+
+details[open] summary::-webkit-details-marker {
+  background: url("../up.svg") center no-repeat;
+  color: transparent;
+}
+
+@-webkit-keyframes sweep {
+  from {
+    opacity: 0;
+    margin-top: -10px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+@keyframes sweep {
+  from {
+    opacity: 0;
+    margin-top: -10px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+/* header for menu*/
+header {
+  position: fixed;
+  bottom: 0;
+  height: auto;
+  width: 100%;
+  background: white;
+  color: black;
+  z-index: 999999999;
+}
+
+header .logo {
+  font-size: 2.5em;
+  font-weight: 700;
+  cursor: pointer;
+  margin-left: 10%;
+  float: left;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 0.5%;
+}
+
+header .main-ul {
+  margin: 0;
+  float: right;
+  width: 65%;
+  height: 100%;
+  text-align: center;
+}
+
+header .main-ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 20px 15px;
+  cursor: pointer;
+}
+
+header .main-ul li a {
+  color: black;
+  font-size: 1em;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+header .main-ul li:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/*dropdown-menu*/
+header .main-ul li .dropdown-menu {
+  position: absolute;
+  bottom: 100%;
+  margin-left: -5%;
+  background: white;
+  display: none;
+  font-size: 12px;
+  line-height: 5px;
+}
+
+header .main-ul li:hover .dropdown-menu {
+  display: block;
+}
+
+header .main-ul li .dropdown-menu li {
+  display: block;
+  margin-left: -25%;
+}
+
+header .main-ul li .dropdown-menu1 {
+  position: absolute;
+  bottom: 100%;
+  margin-left: -1%;
+  background: white;
+  display: none;
+  font-size: 12px;
+  line-height: 5px;
+}
+
+header .main-ul li:hover .dropdown-menu1 {
+  display: block;
+}
+
+header .main-ul li .dropdown-menu1 li {
+  display: block;
+  margin-left: -25%;
+}
+
+header .main-ul li .dropdown-menu2 {
+  position: absolute;
+  bottom: 100%;
+  margin-left: -2%;
+  background: white;
+  display: none;
+  font-size: 14px;
+  line-height: 5px;
+}
+
+header .main-ul li:hover .dropdown-menu2 {
+  display: block;
+}
+
+header .main-ul li .dropdown-menu2 li {
+  display: block;
+  margin-left: -25%;
+}
+
+/* End Footer */
+/*# sourceMappingURL=main.css.map */
